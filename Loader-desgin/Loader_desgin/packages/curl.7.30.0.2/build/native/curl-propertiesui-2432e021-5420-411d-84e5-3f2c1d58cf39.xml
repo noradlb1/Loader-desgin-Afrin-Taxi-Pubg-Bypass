@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectSchemaDefinitions xmlns="clr-namespace:Microsoft.Build.Framework.XamlTypes;assembly=Microsoft.Build.Framework">
+  <Rule Name="ReferencedPackages2fe8be0b-c1d5-4fd3-b09f-2d1a4a3f1db4" PageTemplate="tool" DisplayName="Referenced Packages" SwitchPrefix="/" Order="1">
+    <Rule.Categories>
+      <Category Name="curl" DisplayName="curl" />
+    </Rule.Categories>
+    <Rule.DataSource>
+      <DataSource Persistence="ProjectFile" ItemType="" />
+    </Rule.DataSource>
+    <EnumProperty Name="Linkage-curl" DisplayName="Linkage" Description="Which version of the .lib file to link to this library" Category="curl">
+      <EnumValue Name="" DisplayName="Dynamic Library (DLL)" />
+      <EnumValue Name="static" DisplayName="Static" />
+      <EnumValue Name="ltcg" DisplayName="Link Time Compiler Generation" />
+    </EnumProperty>
+  </Rule>
+</ProjectSchemaDefinitions>

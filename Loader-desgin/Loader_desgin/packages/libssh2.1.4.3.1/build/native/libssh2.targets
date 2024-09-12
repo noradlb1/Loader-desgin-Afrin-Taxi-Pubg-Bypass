@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets="libssh2_init">
+  <PropertyGroup Label="Debug and static and RuntimeLibraryNull" Condition="( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-libssh2)' == 'static' And ('$(RuntimeLibrary)' == '')">
+    <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+  </PropertyGroup>
+  <PropertyGroup Label="Release and static and RuntimeLibraryNull" Condition="( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-libssh2)' == 'static' And ('$(RuntimeLibrary)' == '')">
+    <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+  </PropertyGroup>
+  <PropertyGroup Label="Debug and ltcg and RuntimeLibraryNull" Condition="( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-libssh2)' == 'ltcg' And ('$(RuntimeLibrary)' == '')">
+    <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+  </PropertyGroup>
+  <PropertyGroup Label="Release and ltcg and RuntimeLibraryNull" Condition="( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-libssh2)' == 'ltcg' And ('$(RuntimeLibrary)' == '')">
+    <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+  </PropertyGroup>
+  <PropertyGroup Label="Default initializers for properties">
+    <Linkage-libssh2 Condition="'$(Linkage-libssh2)' == ''">dynamic</Linkage-libssh2>
+    <CallingConvention-libssh2 Condition="'$(CallingConvention-libssh2)' == ''">cdecl</CallingConvention-libssh2>
+  </PropertyGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)\default-propertiesui.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)\libssh2-propertiesui-ae233609-1a7e-45a5-8936-5f421f1956f4.xml" />
+  </ItemGroup>
+  <ItemDefinitionGroup Label="static" Condition="'$(Linkage-libssh2)' == 'static'">
+    <ClCompile>
+      <RuntimeLibrary>$(RuntimeLibrary)</RuntimeLibrary>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="ltcg" Condition="'$(Linkage-libssh2)' == 'ltcg'">
+    <ClCompile>
+      <RuntimeLibrary>$(RuntimeLibrary)</RuntimeLibrary>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)..\..\build\native\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and Win32 and Release and static and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-libssh2)' == 'static' And '$(CallingConvention-libssh2)' == 'cdecl'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\Win32\Release\static\cdecl\libssh2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and Win32 and Release and static and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-libssh2)' == 'static' And '$(CallingConvention-libssh2)' == 'cdecl'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\Win32\Release\static\cdecl\libssh2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and x64 and Release and static and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-libssh2)' == 'static' And '$(CallingConvention-libssh2)' == 'cdecl'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\x64\Release\static\cdecl\libssh2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and x64 and Release and static and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-libssh2)' == 'static' And '$(CallingConvention-libssh2)' == 'cdecl'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\x64\Release\static\cdecl\libssh2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and Win32 and Debug and static and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-libssh2)' == 'static' And '$(CallingConvention-libssh2)' == 'cdecl'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\Win32\Debug\static\cdecl\libssh2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and Win32 and Debug and static and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-libssh2)' == 'static' And '$(CallingConvention-libssh2)' == 'cdecl'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\Win32\Debug\static\cdecl\libssh2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and x64 and Debug and static and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-libssh2)' == 'static' And '$(CallingConvention-libssh2)' == 'cdecl'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\x64\Debug\static\cdecl\libssh2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and x64 and Debug and static and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-libssh2)' == 'static' And '$(CallingConvention-libssh2)' == 'cdecl'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\x64\Debug\static\cdecl\libssh2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and Win32 and Release and ltcg and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-libssh2)' == 'ltcg' And '$(CallingConvention-libssh2)' == 'cdecl'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\Win32\Release\ltcg\cdecl\libssh2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and Win32 and Release and ltcg and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-libssh2)' == 'ltcg' And '$(CallingConvention-libssh2)' == 'cdecl'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\Win32\Release\ltcg\cdecl\libssh2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and x64 and Release and ltcg and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-libssh2)' == 'ltcg' And '$(CallingConvention-libssh2)' == 'cdecl'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\x64\Release\ltcg\cdecl\libssh2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and x64 and Release and ltcg and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-libssh2)' == 'ltcg' And '$(CallingConvention-libssh2)' == 'cdecl'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\x64\Release\ltcg\cdecl\libssh2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and Win32 and Debug and ltcg and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-libssh2)' == 'ltcg' And '$(CallingConvention-libssh2)' == 'cdecl'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\Win32\Debug\ltcg\cdecl\libssh2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and Win32 and Debug and ltcg and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-libssh2)' == 'ltcg' And '$(CallingConvention-libssh2)' == 'cdecl'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\Win32\Debug\ltcg\cdecl\libssh2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and x64 and Debug and ltcg and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-libssh2)' == 'ltcg' And '$(CallingConvention-libssh2)' == 'cdecl'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\x64\Debug\ltcg\cdecl\libssh2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and x64 and Debug and ltcg and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-libssh2)' == 'ltcg' And '$(CallingConvention-libssh2)' == 'cdecl'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\x64\Debug\ltcg\cdecl\libssh2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and Win32 and Release and dynamic and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-libssh2)' == 'dynamic' And '$(CallingConvention-libssh2)' == 'cdecl'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\Win32\Release\dynamic\cdecl\libssh2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and Win32 and Release and dynamic and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-libssh2)' == 'dynamic' And '$(CallingConvention-libssh2)' == 'cdecl'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\Win32\Release\dynamic\cdecl\libssh2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and x64 and Release and dynamic and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-libssh2)' == 'dynamic' And '$(CallingConvention-libssh2)' == 'cdecl'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\x64\Release\dynamic\cdecl\libssh2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and x64 and Release and dynamic and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-libssh2)' == 'dynamic' And '$(CallingConvention-libssh2)' == 'cdecl'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\x64\Release\dynamic\cdecl\libssh2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and Win32 and Debug and dynamic and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-libssh2)' == 'dynamic' And '$(CallingConvention-libssh2)' == 'cdecl'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\Win32\Debug\dynamic\cdecl\libssh2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and Win32 and Debug and dynamic and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-libssh2)' == 'dynamic' And '$(CallingConvention-libssh2)' == 'cdecl'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\Win32\Debug\dynamic\cdecl\libssh2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and x64 and Debug and dynamic and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-libssh2)' == 'dynamic' And '$(CallingConvention-libssh2)' == 'cdecl'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\x64\Debug\dynamic\cdecl\libssh2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and x64 and Debug and dynamic and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-libssh2)' == 'dynamic' And '$(CallingConvention-libssh2)' == 'cdecl'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\x64\Debug\dynamic\cdecl\libssh2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <UsingTask TaskName="libssh2_Contains" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll" TaskFactory="CodeTaskFactory">
+    <ParameterGroup>
+      <Text Output="false" ParameterType="System.String" />
+      <Library Output="false" Required="true" ParameterType="System.String" />
+      <Value Output="false" Required="true" ParameterType="System.String" />
+      <Result Output="true" ParameterType="System.String" />
+    </ParameterGroup>
+    <Task>
+      <Code>Result = ((Text ?? "").Split(';').Contains(Library) ) ? Value : String.Empty;</Code>
+    </Task>
+  </UsingTask>
+  <Target Name="libssh2_init">
+    <libssh2_Contains Text="Linkage-dynamic" Library="libssh2" Value="dynamic" Condition="'$(Linkage-libssh2)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-libssh2" />
+    </libssh2_Contains>
+    <libssh2_Contains Text="Linkage-static" Library="libssh2" Value="static" Condition="'$(Linkage-libssh2)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-libssh2" />
+    </libssh2_Contains>
+    <libssh2_Contains Text="Linkage-ltcg" Library="libssh2" Value="ltcg" Condition="'$(Linkage-libssh2)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-libssh2" />
+    </libssh2_Contains>
+    <libssh2_Contains Text="Linkage-sxs" Library="libssh2" Value="sxs" Condition="'$(Linkage-libssh2)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-libssh2" />
+    </libssh2_Contains>
+    <libssh2_Contains Text="CallingConvention-cdecl" Library="libssh2" Value="cdecl" Condition="'$(CallingConvention-libssh2)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libssh2" />
+    </libssh2_Contains>
+    <libssh2_Contains Text="CallingConvention-stdcall" Library="libssh2" Value="stdcall" Condition="'$(CallingConvention-libssh2)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libssh2" />
+    </libssh2_Contains>
+    <libssh2_Contains Text="CallingConvention-fastcall" Library="libssh2" Value="fastcall" Condition="'$(CallingConvention-libssh2)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libssh2" />
+    </libssh2_Contains>
+    <libssh2_Contains Text="CallingConvention-thiscall" Library="libssh2" Value="thiscall" Condition="'$(CallingConvention-libssh2)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libssh2" />
+    </libssh2_Contains>
+    <libssh2_Contains Text="CallingConvention-clrcall" Library="libssh2" Value="clrcall" Condition="'$(CallingConvention-libssh2)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libssh2" />
+    </libssh2_Contains>
+  </Target>
+</Project>

@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets="zlib_redist_init">
+  <PropertyGroup Label="Default initializers for properties">
+    <Linkage-zlib_redist Condition="'$(Linkage-zlib_redist)' == ''">dynamic</Linkage-zlib_redist>
+    <CallingConvention-zlib_redist Condition="'$(CallingConvention-zlib_redist)' == ''">cdecl</CallingConvention-zlib_redist>
+  </PropertyGroup>
+  <ItemGroup Label="v100 and Win32 and Release and dynamic and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'cdecl'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\Win32\Release\dynamic\cdecl\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\Win32\Release\dynamic\cdecl\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="v110 and Win32 and Release and dynamic and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'cdecl'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\Win32\Release\dynamic\cdecl\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\Win32\Release\dynamic\cdecl\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="v100 and x64 and Release and dynamic and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'cdecl'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\x64\Release\dynamic\cdecl\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\x64\Release\dynamic\cdecl\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="v110 and x64 and Release and dynamic and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'cdecl'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\x64\Release\dynamic\cdecl\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\x64\Release\dynamic\cdecl\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="v100 and Win32 and Debug and dynamic and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'cdecl'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\Win32\Debug\dynamic\cdecl\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\Win32\Debug\dynamic\cdecl\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="v110 and Win32 and Debug and dynamic and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'cdecl'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\Win32\Debug\dynamic\cdecl\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\Win32\Debug\dynamic\cdecl\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="v100 and x64 and Debug and dynamic and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'cdecl'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\x64\Debug\dynamic\cdecl\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\x64\Debug\dynamic\cdecl\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="v110 and x64 and Debug and dynamic and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'cdecl'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\x64\Debug\dynamic\cdecl\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\x64\Debug\dynamic\cdecl\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="v100 and Win32 and Release and dynamic and stdcall" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'stdcall'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\Win32\Release\dynamic\stdcall\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\Win32\Release\dynamic\stdcall\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="v110 and Win32 and Release and dynamic and stdcall" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'stdcall'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\Win32\Release\dynamic\stdcall\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\Win32\Release\dynamic\stdcall\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="v100 and x64 and Release and dynamic and stdcall" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'stdcall'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\x64\Release\dynamic\stdcall\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\x64\Release\dynamic\stdcall\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="v110 and x64 and Release and dynamic and stdcall" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'stdcall'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\x64\Release\dynamic\stdcall\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\x64\Release\dynamic\stdcall\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="v100 and Win32 and Debug and dynamic and stdcall" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'stdcall'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\Win32\Debug\dynamic\stdcall\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\Win32\Debug\dynamic\stdcall\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="v110 and Win32 and Debug and dynamic and stdcall" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'stdcall'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\Win32\Debug\dynamic\stdcall\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\Win32\Debug\dynamic\stdcall\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="v100 and x64 and Debug and dynamic and stdcall" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'stdcall'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\x64\Debug\dynamic\stdcall\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\x64\Debug\dynamic\stdcall\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="v110 and x64 and Debug and dynamic and stdcall" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'stdcall'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\x64\Debug\dynamic\stdcall\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\x64\Debug\dynamic\stdcall\zlib.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)\default-propertiesui.xml" />
+  </ItemGroup>
+  <Target Name="zlib_redist_AfterBuild" AfterTargets="AfterBuild" />
+  <Target Name="zlib_redist_AfterBuild_v100_and_Win32_and_Release_and_dynamic_and_cdecl" Label="v100 and Win32 and Release and dynamic and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'cdecl'" AfterTargets="zlib_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\Win32\Release\dynamic\cdecl\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\Win32\Release\dynamic\cdecl\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="zlib_redist_AfterBuild_v110_and_Win32_and_Release_and_dynamic_and_cdecl" Label="v110 and Win32 and Release and dynamic and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'cdecl'" AfterTargets="zlib_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\Win32\Release\dynamic\cdecl\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\Win32\Release\dynamic\cdecl\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="zlib_redist_AfterBuild_v100_and_x64_and_Release_and_dynamic_and_cdecl" Label="v100 and x64 and Release and dynamic and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'cdecl'" AfterTargets="zlib_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\x64\Release\dynamic\cdecl\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\x64\Release\dynamic\cdecl\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="zlib_redist_AfterBuild_v110_and_x64_and_Release_and_dynamic_and_cdecl" Label="v110 and x64 and Release and dynamic and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'cdecl'" AfterTargets="zlib_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\x64\Release\dynamic\cdecl\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\x64\Release\dynamic\cdecl\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="zlib_redist_AfterBuild_v100_and_Win32_and_Debug_and_dynamic_and_cdecl" Label="v100 and Win32 and Debug and dynamic and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'cdecl'" AfterTargets="zlib_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\Win32\Debug\dynamic\cdecl\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\Win32\Debug\dynamic\cdecl\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="zlib_redist_AfterBuild_v110_and_Win32_and_Debug_and_dynamic_and_cdecl" Label="v110 and Win32 and Debug and dynamic and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'cdecl'" AfterTargets="zlib_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\Win32\Debug\dynamic\cdecl\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\Win32\Debug\dynamic\cdecl\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="zlib_redist_AfterBuild_v100_and_x64_and_Debug_and_dynamic_and_cdecl" Label="v100 and x64 and Debug and dynamic and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'cdecl'" AfterTargets="zlib_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\x64\Debug\dynamic\cdecl\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\x64\Debug\dynamic\cdecl\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="zlib_redist_AfterBuild_v110_and_x64_and_Debug_and_dynamic_and_cdecl" Label="v110 and x64 and Debug and dynamic and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'cdecl'" AfterTargets="zlib_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\x64\Debug\dynamic\cdecl\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\x64\Debug\dynamic\cdecl\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="zlib_redist_AfterBuild_v100_and_Win32_and_Release_and_dynamic_and_stdcall" Label="v100 and Win32 and Release and dynamic and stdcall" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'stdcall'" AfterTargets="zlib_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\Win32\Release\dynamic\stdcall\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\Win32\Release\dynamic\stdcall\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="zlib_redist_AfterBuild_v110_and_Win32_and_Release_and_dynamic_and_stdcall" Label="v110 and Win32 and Release and dynamic and stdcall" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'stdcall'" AfterTargets="zlib_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\Win32\Release\dynamic\stdcall\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\Win32\Release\dynamic\stdcall\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="zlib_redist_AfterBuild_v100_and_x64_and_Release_and_dynamic_and_stdcall" Label="v100 and x64 and Release and dynamic and stdcall" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'stdcall'" AfterTargets="zlib_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\x64\Release\dynamic\stdcall\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\x64\Release\dynamic\stdcall\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="zlib_redist_AfterBuild_v110_and_x64_and_Release_and_dynamic_and_stdcall" Label="v110 and x64 and Release and dynamic and stdcall" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'stdcall'" AfterTargets="zlib_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\x64\Release\dynamic\stdcall\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\x64\Release\dynamic\stdcall\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="zlib_redist_AfterBuild_v100_and_Win32_and_Debug_and_dynamic_and_stdcall" Label="v100 and Win32 and Debug and dynamic and stdcall" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'stdcall'" AfterTargets="zlib_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\Win32\Debug\dynamic\stdcall\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\Win32\Debug\dynamic\stdcall\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="zlib_redist_AfterBuild_v110_and_Win32_and_Debug_and_dynamic_and_stdcall" Label="v110 and Win32 and Debug and dynamic and stdcall" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'stdcall'" AfterTargets="zlib_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\Win32\Debug\dynamic\stdcall\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\Win32\Debug\dynamic\stdcall\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="zlib_redist_AfterBuild_v100_and_x64_and_Debug_and_dynamic_and_stdcall" Label="v100 and x64 and Debug and dynamic and stdcall" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'stdcall'" AfterTargets="zlib_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\x64\Debug\dynamic\stdcall\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\x64\Debug\dynamic\stdcall\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="zlib_redist_AfterBuild_v110_and_x64_and_Debug_and_dynamic_and_stdcall" Label="v110 and x64 and Debug and dynamic and stdcall" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-zlib_redist)' == 'dynamic' And '$(CallingConvention-zlib_redist)' == 'stdcall'" AfterTargets="zlib_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\x64\Debug\dynamic\stdcall\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\x64\Debug\dynamic\stdcall\zlib.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <UsingTask TaskName="zlib_redist_Contains" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll" TaskFactory="CodeTaskFactory">
+    <ParameterGroup>
+      <Text Output="false" ParameterType="System.String" />
+      <Library Output="false" Required="true" ParameterType="System.String" />
+      <Value Output="false" Required="true" ParameterType="System.String" />
+      <Result Output="true" ParameterType="System.String" />
+    </ParameterGroup>
+    <Task>
+      <Code>Result = ((Text ?? "").Split(';').Contains(Library) ) ? Value : String.Empty;</Code>
+    </Task>
+  </UsingTask>
+  <Target Name="zlib_redist_init">
+    <zlib_redist_Contains Text="Linkage-dynamic" Library="zlib_redist" Value="dynamic" Condition="'$(Linkage-zlib_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-zlib_redist" />
+    </zlib_redist_Contains>
+    <zlib_redist_Contains Text="Linkage-static" Library="zlib_redist" Value="static" Condition="'$(Linkage-zlib_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-zlib_redist" />
+    </zlib_redist_Contains>
+    <zlib_redist_Contains Text="Linkage-ltcg" Library="zlib_redist" Value="ltcg" Condition="'$(Linkage-zlib_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-zlib_redist" />
+    </zlib_redist_Contains>
+    <zlib_redist_Contains Text="Linkage-sxs" Library="zlib_redist" Value="sxs" Condition="'$(Linkage-zlib_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-zlib_redist" />
+    </zlib_redist_Contains>
+    <zlib_redist_Contains Text="CallingConvention-cdecl" Library="zlib_redist" Value="cdecl" Condition="'$(CallingConvention-zlib_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-zlib_redist" />
+    </zlib_redist_Contains>
+    <zlib_redist_Contains Text="CallingConvention-stdcall" Library="zlib_redist" Value="stdcall" Condition="'$(CallingConvention-zlib_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-zlib_redist" />
+    </zlib_redist_Contains>
+  </Target>
+</Project>

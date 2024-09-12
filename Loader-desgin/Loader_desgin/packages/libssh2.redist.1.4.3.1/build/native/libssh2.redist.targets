@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets="libssh2_redist_init">
+  <PropertyGroup Label="Default initializers for properties">
+    <Linkage-libssh2_redist Condition="'$(Linkage-libssh2_redist)' == ''">dynamic</Linkage-libssh2_redist>
+    <CallingConvention-libssh2_redist Condition="'$(CallingConvention-libssh2_redist)' == ''">cdecl</CallingConvention-libssh2_redist>
+  </PropertyGroup>
+  <ItemGroup Label="v100 and Win32 and Release and dynamic and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-libssh2_redist)' == 'dynamic' And '$(CallingConvention-libssh2_redist)' == 'cdecl'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\Win32\Release\dynamic\cdecl\libssh2.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\Win32\Release\dynamic\cdecl\libssh2.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="v110 and Win32 and Release and dynamic and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-libssh2_redist)' == 'dynamic' And '$(CallingConvention-libssh2_redist)' == 'cdecl'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\Win32\Release\dynamic\cdecl\libssh2.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\Win32\Release\dynamic\cdecl\libssh2.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="v100 and x64 and Release and dynamic and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-libssh2_redist)' == 'dynamic' And '$(CallingConvention-libssh2_redist)' == 'cdecl'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\x64\Release\dynamic\cdecl\libssh2.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\x64\Release\dynamic\cdecl\libssh2.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="v110 and x64 and Release and dynamic and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-libssh2_redist)' == 'dynamic' And '$(CallingConvention-libssh2_redist)' == 'cdecl'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\x64\Release\dynamic\cdecl\libssh2.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\x64\Release\dynamic\cdecl\libssh2.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="v100 and Win32 and Debug and dynamic and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-libssh2_redist)' == 'dynamic' And '$(CallingConvention-libssh2_redist)' == 'cdecl'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\Win32\Debug\dynamic\cdecl\libssh2.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\Win32\Debug\dynamic\cdecl\libssh2.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="v110 and Win32 and Debug and dynamic and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-libssh2_redist)' == 'dynamic' And '$(CallingConvention-libssh2_redist)' == 'cdecl'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\Win32\Debug\dynamic\cdecl\libssh2.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\Win32\Debug\dynamic\cdecl\libssh2.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="v100 and x64 and Debug and dynamic and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-libssh2_redist)' == 'dynamic' And '$(CallingConvention-libssh2_redist)' == 'cdecl'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\x64\Debug\dynamic\cdecl\libssh2.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\x64\Debug\dynamic\cdecl\libssh2.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="v110 and x64 and Debug and dynamic and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-libssh2_redist)' == 'dynamic' And '$(CallingConvention-libssh2_redist)' == 'cdecl'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\x64\Debug\dynamic\cdecl\libssh2.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\x64\Debug\dynamic\cdecl\libssh2.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)\default-propertiesui.xml" />
+  </ItemGroup>
+  <Target Name="libssh2_redist_AfterBuild" AfterTargets="AfterBuild" />
+  <Target Name="libssh2_redist_AfterBuild_v100_and_Win32_and_Release_and_dynamic_and_cdecl" Label="v100 and Win32 and Release and dynamic and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-libssh2_redist)' == 'dynamic' And '$(CallingConvention-libssh2_redist)' == 'cdecl'" AfterTargets="libssh2_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\Win32\Release\dynamic\cdecl\libssh2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\Win32\Release\dynamic\cdecl\libssh2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="libssh2_redist_AfterBuild_v110_and_Win32_and_Release_and_dynamic_and_cdecl" Label="v110 and Win32 and Release and dynamic and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-libssh2_redist)' == 'dynamic' And '$(CallingConvention-libssh2_redist)' == 'cdecl'" AfterTargets="libssh2_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\Win32\Release\dynamic\cdecl\libssh2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\Win32\Release\dynamic\cdecl\libssh2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="libssh2_redist_AfterBuild_v100_and_x64_and_Release_and_dynamic_and_cdecl" Label="v100 and x64 and Release and dynamic and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-libssh2_redist)' == 'dynamic' And '$(CallingConvention-libssh2_redist)' == 'cdecl'" AfterTargets="libssh2_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\x64\Release\dynamic\cdecl\libssh2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\x64\Release\dynamic\cdecl\libssh2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="libssh2_redist_AfterBuild_v110_and_x64_and_Release_and_dynamic_and_cdecl" Label="v110 and x64 and Release and dynamic and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-libssh2_redist)' == 'dynamic' And '$(CallingConvention-libssh2_redist)' == 'cdecl'" AfterTargets="libssh2_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\x64\Release\dynamic\cdecl\libssh2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\x64\Release\dynamic\cdecl\libssh2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="libssh2_redist_AfterBuild_v100_and_Win32_and_Debug_and_dynamic_and_cdecl" Label="v100 and Win32 and Debug and dynamic and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-libssh2_redist)' == 'dynamic' And '$(CallingConvention-libssh2_redist)' == 'cdecl'" AfterTargets="libssh2_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\Win32\Debug\dynamic\cdecl\libssh2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\Win32\Debug\dynamic\cdecl\libssh2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="libssh2_redist_AfterBuild_v110_and_Win32_and_Debug_and_dynamic_and_cdecl" Label="v110 and Win32 and Debug and dynamic and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-libssh2_redist)' == 'dynamic' And '$(CallingConvention-libssh2_redist)' == 'cdecl'" AfterTargets="libssh2_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\Win32\Debug\dynamic\cdecl\libssh2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\Win32\Debug\dynamic\cdecl\libssh2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="libssh2_redist_AfterBuild_v100_and_x64_and_Debug_and_dynamic_and_cdecl" Label="v100 and x64 and Debug and dynamic and cdecl" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-libssh2_redist)' == 'dynamic' And '$(CallingConvention-libssh2_redist)' == 'cdecl'" AfterTargets="libssh2_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\x64\Debug\dynamic\cdecl\libssh2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v100\x64\Debug\dynamic\cdecl\libssh2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="libssh2_redist_AfterBuild_v110_and_x64_and_Debug_and_dynamic_and_cdecl" Label="v110 and x64 and Debug and dynamic and cdecl" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-libssh2_redist)' == 'dynamic' And '$(CallingConvention-libssh2_redist)' == 'cdecl'" AfterTargets="libssh2_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\x64\Debug\dynamic\cdecl\libssh2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\v110\x64\Debug\dynamic\cdecl\libssh2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <UsingTask TaskName="libssh2_redist_Contains" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll" TaskFactory="CodeTaskFactory">
+    <ParameterGroup>
+      <Text Output="false" ParameterType="System.String" />
+      <Library Output="false" Required="true" ParameterType="System.String" />
+      <Value Output="false" Required="true" ParameterType="System.String" />
+      <Result Output="true" ParameterType="System.String" />
+    </ParameterGroup>
+    <Task>
+      <Code>Result = ((Text ?? "").Split(';').Contains(Library) ) ? Value : String.Empty;</Code>
+    </Task>
+  </UsingTask>
+  <Target Name="libssh2_redist_init">
+    <libssh2_redist_Contains Text="Linkage-dynamic" Library="libssh2_redist" Value="dynamic" Condition="'$(Linkage-libssh2_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-libssh2_redist" />
+    </libssh2_redist_Contains>
+    <libssh2_redist_Contains Text="Linkage-static" Library="libssh2_redist" Value="static" Condition="'$(Linkage-libssh2_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-libssh2_redist" />
+    </libssh2_redist_Contains>
+    <libssh2_redist_Contains Text="Linkage-ltcg" Library="libssh2_redist" Value="ltcg" Condition="'$(Linkage-libssh2_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-libssh2_redist" />
+    </libssh2_redist_Contains>
+    <libssh2_redist_Contains Text="Linkage-sxs" Library="libssh2_redist" Value="sxs" Condition="'$(Linkage-libssh2_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-libssh2_redist" />
+    </libssh2_redist_Contains>
+    <libssh2_redist_Contains Text="CallingConvention-cdecl" Library="libssh2_redist" Value="cdecl" Condition="'$(CallingConvention-libssh2_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libssh2_redist" />
+    </libssh2_redist_Contains>
+    <libssh2_redist_Contains Text="CallingConvention-stdcall" Library="libssh2_redist" Value="stdcall" Condition="'$(CallingConvention-libssh2_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libssh2_redist" />
+    </libssh2_redist_Contains>
+    <libssh2_redist_Contains Text="CallingConvention-fastcall" Library="libssh2_redist" Value="fastcall" Condition="'$(CallingConvention-libssh2_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libssh2_redist" />
+    </libssh2_redist_Contains>
+    <libssh2_redist_Contains Text="CallingConvention-thiscall" Library="libssh2_redist" Value="thiscall" Condition="'$(CallingConvention-libssh2_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libssh2_redist" />
+    </libssh2_redist_Contains>
+    <libssh2_redist_Contains Text="CallingConvention-clrcall" Library="libssh2_redist" Value="clrcall" Condition="'$(CallingConvention-libssh2_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libssh2_redist" />
+    </libssh2_redist_Contains>
+  </Target>
+</Project>

@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\openssl.1.0.1.21\build\native\openssl.props" Condition="Exists('packages\openssl.1.0.1.21\build\native\openssl.props')" />
+  <Import Project="packages\Costura.Fody.5.7.0\build\Costura.Fody.props" Condition="Exists('packages\Costura.Fody.5.7.0\build\Costura.Fody.props')" />
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{82212CF7-C4EA-436C-ADD5-F7AD56122BF5}</ProjectGuid>
+    <RootNamespace>ImGui Loader Base</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>TAXI HACKER</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>C:\Users\GAN\Desktop\Loader-desgin\Loader_desgin\Discord SDK\include;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;C:\Users\GAN\Desktop\Loader-desgin\Loader_desgin\libs\openssl\include;C:\Users\GAN\Desktop\Loader-desgin\Loader_desgin\libs\json\include;C:\Users\GAN\Desktop\Loader-desgin\Loader_desgin\libs\curl\include;C:\Users\GAN\Desktop\Loader-desgin\Loader_desgin\libs\cryptopp\include;C:\Users\GAN\Desktop\Loader-desgin\Loader_desgin\imgui-docking;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64;C:\Users\GAN\Desktop\Loader-desgin\Loader_desgin\libs\openssl\lib;C:\Users\GAN\Desktop\Loader-desgin\Loader_desgin\libs\curl\lib;C:\Users\GAN\Desktop\Loader-desgin\Loader_desgin\libs\cryptopp\lib;$(LibraryPath)</LibraryPath>
+    <SourcePath>$(VC_SourcePath);</SourcePath>
+    <TargetName>TAXI</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;./libs/cryptopp/include;./libs/curl/include;./libs/openssl/include;./libs/json/include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64;./libs/curl/lib/;./libs/cryptopp/lib/;./libs/openssl/lib;./libs/;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(VC_IncludePath);$(WindowsSDK_IncludePath);DirectX SDK %28June 2010%29\Include;./libs/cryptopp/include;./libs/curl/include;./libs/openssl/include;./libs/json/include</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64;./libs/curl/lib/;./libs/cryptopp/lib/;./libs/openssl/lib;./libs/</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);</LibraryPath>
+    <TargetName>baba</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnabled>false</VcpkgEnabled>
+    <VcpkgManifestInstall>false</VcpkgManifestInstall>
+    <VcpkgAutoLink>false</VcpkgAutoLink>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_WINDLL;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_CRT_NON_CONFORMING_WSTOCK;_MBCS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>/lib/cryptopp-static.lib;/lib/libcurl.lib;./libs/openssl/lib/libcrypto.lib;./libs/openssl/lib/libssl.lib;./libs/zlib.lib;Normaliz.lib;Ws2_32.lib;Wldap32.lib;Crypt32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>Custom</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PreprocessorDefinitions>_CRT_NON_CONFORMING_WCSTOK;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>./libs/cryptopp/lib/cryptopp-static.lib;./libs/curl/lib/libcurl.lib;./libs/openssl/lib/libcrypto.lib;./libs/openssl/lib/libssl.lib;./libs/zlib.lib;Normaliz.lib;Ws2_32.lib;Wldap32.lib;Crypt32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <ForceFileOutput>Enabled</ForceFileOutput>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Aimbot.cpp" />
+    <ClCompile Include="Algorithm.cpp" />
+    <ClCompile Include="bp.cpp" />
+    <ClCompile Include="Data.cpp" />
+    <ClCompile Include="Discord SDK\examples\send-presence\send-presence.c" />
+    <ClCompile Include="Discord SDK\src\connection_unix.cpp" />
+    <ClCompile Include="Discord SDK\src\connection_win.cpp" />
+    <ClCompile Include="Discord SDK\src\discord_register_linux.cpp" />
+    <ClCompile Include="Discord SDK\src\discord_register_win.cpp" />
+    <ClCompile Include="Discord SDK\src\discord_rpc.cpp" />
+    <ClCompile Include="Discord SDK\src\dllmain.cpp" />
+    <ClCompile Include="Discord SDK\src\rpc_connection.cpp" />
+    <ClCompile Include="Discord SDK\src\serialization.cpp" />
+    <ClCompile Include="Discord.cpp" />
+    <ClCompile Include="Driver.cpp" />
+    <ClCompile Include="DX11.cpp" />
+    <ClCompile Include="DX11Window.cpp" />
+    <ClCompile Include="Esp.cpp" />
+    <ClCompile Include="FarsiType.cpp" />
+    <ClCompile Include="Global.cpp" />
+    <ClCompile Include="hrdwr.cpp" />
+    <ClCompile Include="imgui-docking\imgui.cpp" />
+    <ClCompile Include="imgui-docking\imgui_demo.cpp" />
+    <ClCompile Include="imgui-docking\imgui_draw.cpp" />
+    <ClCompile Include="imgui-docking\imgui_impl_dx11.cpp" />
+    <ClCompile Include="imgui-docking\imgui_impl_win32.cpp" />
+    <ClCompile Include="imgui-docking\imgui_tables.cpp" />
+    <ClCompile Include="imgui-docking\imgui_widgets.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Memory.cpp" />
+    <ClCompile Include="mrboot.cpp" />
+    <ClCompile Include="Setting.cpp" />
+    <ClCompile Include="SNOW\Snowflake.cpp" />
+    <ClCompile Include="tele.h" />
+    <ClCompile Include="utf.c" />
+    <ClCompile Include="Utility.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\HooksUnity\HooksUnity\jni\MyLibrary.h" />
+    <ClInclude Include="Aimbot.h" />
+    <ClInclude Include="Algorithm.h" />
+    <ClInclude Include="api\KeyAuth.hpp" />
+    <ClInclude Include="api\Swifty.hpp" />
+    <ClInclude Include="api\Swifty_hor.hpp" />
+    <ClInclude Include="api\xor.h" />
+    <ClInclude Include="bp.h" />
+    <ClInclude Include="Data.h" />
+    <ClInclude Include="dd.h" />
+    <ClInclude Include="Discord SDK\examples\unrealstatus\Plugins\discordrpc\Source\DiscordRpc\Public\DiscordRpc.h" />
+    <ClInclude Include="Discord SDK\include\discord_register.h" />
+    <ClInclude Include="Discord SDK\include\discord_rpc.h" />
+    <ClInclude Include="Discord SDK\src\backoff.h" />
+    <ClInclude Include="Discord SDK\src\connection.h" />
+    <ClInclude Include="Discord SDK\src\msg_queue.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\allocators.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\cursorstreamwrapper.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\document.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\encodedstream.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\encodings.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\error\en.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\error\error.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\filereadstream.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\filewritestream.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\fwd.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\internal\biginteger.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\internal\clzll.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\internal\diyfp.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\internal\dtoa.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\internal\ieee754.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\internal\itoa.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\internal\meta.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\internal\pow10.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\internal\regex.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\internal\stack.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\internal\strfunc.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\internal\strtod.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\internal\swap.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\istreamwrapper.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\memorybuffer.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\memorystream.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\msinttypes\inttypes.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\msinttypes\stdint.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\ostreamwrapper.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\pointer.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\prettywriter.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\rapidjson.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\reader.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\schema.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\stream.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\stringbuffer.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\uri.h" />
+    <ClInclude Include="Discord SDK\src\rapidjson\writer.h" />
+    <ClInclude Include="Discord SDK\src\rpc_connection.h" />
+    <ClInclude Include="Discord SDK\src\serialization.h" />
+    <ClInclude Include="Discord.h" />
+    <ClInclude Include="Driver.h" />
+    <ClInclude Include="DX11.h" />
+    <ClInclude Include="DX11Window.h" />
+    <ClInclude Include="Esp.h" />
+    <ClInclude Include="FarsiType.h" />
+    <ClInclude Include="font.h" />
+    <ClInclude Include="Global.h" />
+    <ClInclude Include="GradientEffect.hpp" />
+    <ClInclude Include="heart.h" />
+    <ClInclude Include="Heart\HP0.h" />
+    <ClInclude Include="Heart\HP100.h" />
+    <ClInclude Include="Heart\HP25.h" />
+    <ClInclude Include="Heart\HP50.h" />
+    <ClInclude Include="Heart\HP75.h" />
+    <ClInclude Include="hrdwr.h" />
+    <ClInclude Include="icon.h" />
+    <ClInclude Include="iconcpp.h" />
+    <ClInclude Include="imconfig.h" />
+    <ClInclude Include="imgui-docking\imconfig.h" />
+    <ClInclude Include="imgui-docking\imgui.h" />
+    <ClInclude Include="imgui-docking\imgui_impl_dx11.h" />
+    <ClInclude Include="imgui-docking\imgui_impl_win32.h" />
+    <ClInclude Include="imgui-docking\imgui_internal.h" />
+    <ClInclude Include="imgui-docking\imstb_rectpack.h" />
+    <ClInclude Include="imgui-docking\imstb_textedit.h" />
+    <ClInclude Include="imgui-docking\imstb_truetype.h" />
+    <ClInclude Include="imguipp.h" />
+    <ClInclude Include="imgui_notify.h" />
+    <ClInclude Include="Includes.h" />
+    <ClInclude Include="loadDrv.h" />
+    <ClInclude Include="logo.h" />
+    <ClInclude Include="Memory.h" />
+    <ClInclude Include="momeryfont.h" />
+    <ClInclude Include="mrboot.h" />
+    <ClInclude Include="Offset.h" />
+    <ClInclude Include="opencv.hpp" />
+    <ClInclude Include="Petrol\Oil0.h" />
+    <ClInclude Include="Petrol\Oil10.h" />
+    <ClInclude Include="Petrol\Oil100.h" />
+    <ClInclude Include="Petrol\Oil20.h" />
+    <ClInclude Include="Petrol\Oil40.h" />
+    <ClInclude Include="Petrol\Oil60.h" />
+    <ClInclude Include="Petrol\Oil75.h" />
+    <ClInclude Include="Petrol\Oil90.h" />
+    <ClInclude Include="Setting.h" />
+    <ClInclude Include="SimpleIni.h" />
+    <ClInclude Include="skinss.h" />
+    <ClInclude Include="SNOW\Snowflake.hpp" />
+    <ClInclude Include="stb_image.h" />
+    <ClInclude Include="termcolor.hpp" />
+    <ClInclude Include="Unicode.h" />
+    <ClInclude Include="units_converter.h" />
+    <ClInclude Include="ustream.h" />
+    <ClInclude Include="utf.h" />
+    <ClInclude Include="Utility.h" />
+    <ClInclude Include="vn.h" />
+    <ClInclude Include="woring.hpp" />
+    <ClInclude Include="xorstr.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="packages\opencv4.2.2020.5.26\build\native\opencv4.2.targets" Condition="Exists('packages\opencv4.2.2020.5.26\build\native\opencv4.2.targets')" />
+    <Import Project="packages\Costura.Fody.5.7.0\build\Costura.Fody.targets" Condition="Exists('packages\Costura.Fody.5.7.0\build\Costura.Fody.targets')" />
+    <Import Project="packages\nupengl.core.redist.0.1.0.1\build\native\nupengl.core.redist.targets" Condition="Exists('packages\nupengl.core.redist.0.1.0.1\build\native\nupengl.core.redist.targets')" />
+    <Import Project="packages\nupengl.core.0.1.0.1\build\native\nupengl.core.targets" Condition="Exists('packages\nupengl.core.0.1.0.1\build\native\nupengl.core.targets')" />
+    <Import Project="packages\jsoncpp.redist.0.6.0.1\build\native\jsoncpp.redist.targets" Condition="Exists('packages\jsoncpp.redist.0.6.0.1\build\native\jsoncpp.redist.targets')" />
+    <Import Project="packages\curl-vc140-static-32_64.7.53.0\build\native\curl-vc140-static-32_64.targets" Condition="Exists('packages\curl-vc140-static-32_64.7.53.0\build\native\curl-vc140-static-32_64.targets')" />
+    <Import Project="packages\curlcpp-vc140-static-32_64.1.0.2\build\native\curlcpp-vc140-static-32_64.targets" Condition="Exists('packages\curlcpp-vc140-static-32_64.1.0.2\build\native\curlcpp-vc140-static-32_64.targets')" />
+    <Import Project="packages\curl.redist.7.30.0.2\build\native\curl.redist.targets" Condition="Exists('packages\curl.redist.7.30.0.2\build\native\curl.redist.targets')" />
+    <Import Project="packages\libssh2.redist.1.4.3.1\build\native\libssh2.redist.targets" Condition="Exists('packages\libssh2.redist.1.4.3.1\build\native\libssh2.redist.targets')" />
+    <Import Project="packages\openssl.redist.1.0.1.21\build\native\openssl.redist.targets" Condition="Exists('packages\openssl.redist.1.0.1.21\build\native\openssl.redist.targets')" />
+    <Import Project="packages\zlib.redist.1.2.8.1\build\native\zlib.redist.targets" Condition="Exists('packages\zlib.redist.1.2.8.1\build\native\zlib.redist.targets')" />
+    <Import Project="packages\zlib.1.2.8.1\build\native\zlib.targets" Condition="Exists('packages\zlib.1.2.8.1\build\native\zlib.targets')" />
+    <Import Project="packages\openssl.1.0.1.21\build\native\openssl.targets" Condition="Exists('packages\openssl.1.0.1.21\build\native\openssl.targets')" />
+    <Import Project="packages\JsonCpp.Windows.1.9.2\build\JsonCpp.Windows.targets" Condition="Exists('packages\JsonCpp.Windows.1.9.2\build\JsonCpp.Windows.targets')" />
+    <Import Project="packages\openssl-vc140-static-32_64.1.1.1.1\build\native\openssl-vc140-static-32_64.targets" Condition="Exists('packages\openssl-vc140-static-32_64.1.1.1.1\build\native\openssl-vc140-static-32_64.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\opencv4.2.2020.5.26\build\native\opencv4.2.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\opencv4.2.2020.5.26\build\native\opencv4.2.targets'))" />
+    <Error Condition="!Exists('packages\Costura.Fody.5.7.0\build\Costura.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Costura.Fody.5.7.0\build\Costura.Fody.props'))" />
+    <Error Condition="!Exists('packages\Costura.Fody.5.7.0\build\Costura.Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Costura.Fody.5.7.0\build\Costura.Fody.targets'))" />
+    <Error Condition="!Exists('packages\nupengl.core.redist.0.1.0.1\build\native\nupengl.core.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\nupengl.core.redist.0.1.0.1\build\native\nupengl.core.redist.targets'))" />
+    <Error Condition="!Exists('packages\nupengl.core.0.1.0.1\build\native\nupengl.core.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\nupengl.core.0.1.0.1\build\native\nupengl.core.targets'))" />
+    <Error Condition="!Exists('packages\jsoncpp.redist.0.6.0.1\build\native\jsoncpp.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\jsoncpp.redist.0.6.0.1\build\native\jsoncpp.redist.targets'))" />
+    <Error Condition="!Exists('packages\curl-vc140-static-32_64.7.53.0\build\native\curl-vc140-static-32_64.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\curl-vc140-static-32_64.7.53.0\build\native\curl-vc140-static-32_64.targets'))" />
+    <Error Condition="!Exists('packages\curlcpp-vc140-static-32_64.1.0.2\build\native\curlcpp-vc140-static-32_64.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\curlcpp-vc140-static-32_64.1.0.2\build\native\curlcpp-vc140-static-32_64.targets'))" />
+    <Error Condition="!Exists('packages\curl.redist.7.30.0.2\build\native\curl.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\curl.redist.7.30.0.2\build\native\curl.redist.targets'))" />
+    <Error Condition="!Exists('packages\libssh2.redist.1.4.3.1\build\native\libssh2.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\libssh2.redist.1.4.3.1\build\native\libssh2.redist.targets'))" />
+    <Error Condition="!Exists('packages\openssl.redist.1.0.1.21\build\native\openssl.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\openssl.redist.1.0.1.21\build\native\openssl.redist.targets'))" />
+    <Error Condition="!Exists('packages\zlib.redist.1.2.8.1\build\native\zlib.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\zlib.redist.1.2.8.1\build\native\zlib.redist.targets'))" />
+    <Error Condition="!Exists('packages\zlib.1.2.8.1\build\native\zlib.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\zlib.1.2.8.1\build\native\zlib.targets'))" />
+    <Error Condition="!Exists('packages\openssl.1.0.1.21\build\native\openssl.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\openssl.1.0.1.21\build\native\openssl.props'))" />
+    <Error Condition="!Exists('packages\openssl.1.0.1.21\build\native\openssl.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\openssl.1.0.1.21\build\native\openssl.targets'))" />
+    <Error Condition="!Exists('packages\JsonCpp.Windows.1.9.2\build\JsonCpp.Windows.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\JsonCpp.Windows.1.9.2\build\JsonCpp.Windows.targets'))" />
+    <Error Condition="!Exists('packages\openssl-vc140-static-32_64.1.1.1.1\build\native\openssl-vc140-static-32_64.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\openssl-vc140-static-32_64.1.1.1.1\build\native\openssl-vc140-static-32_64.targets'))" />
+  </Target>
+</Project>
