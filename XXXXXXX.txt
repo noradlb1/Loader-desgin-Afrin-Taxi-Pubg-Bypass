@@ -1,0 +1,118 @@
+ext&ARM.extab:041AF4D4 68 1F 9F E5                   LDR             R1, =(aI_23 - 0x41AF4E8) ; "I"
+.text&ARM.extab:041AF4D8 20 00 84 E2                   ADD             R0, R4, #0x20 ; ' '
+.text&ARM.extab:041AF4DC 01 20 A0 E3                   MOV             R2, #1
+.text&ARM.extab:041AF4E0 01 10 8F E0                   ADD             R1, PC, R1              ; "I"
+.text&ARM.extab:041AF4E4 AD CC 07 EB                   BL              sub_43A27A0
+.text&ARM.extab:041AF4E4
+.text&ARM.extab:041AF4E8 58 1F 9F E5                   LDR             R1, =(aIsblocked - 0x41AF4FC) ; "IsBlocked"
+.text&ARM.extab:041AF4EC 28 00 84 E2                   ADD             R0, R4, #0x28 ; '('
+.text&ARM.extab:041AF4F0 01 20 A0 E3                   MOV             R2, #1
+.text&ARM.extab:041AF4F4 01 10 8F E0                   ADD             R1, PC, R1              ; "IsBlocked"
+.text&ARM.extab:041AF4F8 A8 CC 07 EB                   BL              sub_43A27A0
+.text&ARM.extab:041AF4F8
+.text&ARM.extab:041AF4FC 48 1F 9F E5                   LDR             R1, =(off_16C4238+2 - 0x41AF510)
+
+
+
+
+.text&ARM.extab:041AF43C E0 1F 9F E5                   LDR             R1, =(aPickuptarget - 0x41AF450) ; "PickUpTarget"
+.text&ARM.extab:041AF440 60 00 84 E2                   ADD             R0, R4, #0x60 ; '`'
+.text&ARM.extab:041AF444 01 20 A0 E3                   MOV             R2, #1
+.text&ARM.extab:041AF448 01 10 8F E0                   ADD             R1, PC, R1              ; ""
+.text&ARM.extab:041AF44C D3 CC 07 EB                   BL              sub_43A27A0
+
+
+
+
+text&ARM.extab:041AF170 10 16 1F E5                   LDR             R1, =(aTargetenemyact - 0x41AF184) ; "TargetEnemyActor"
+.text&ARM.extab:041AF174 30 00 84 E2                   ADD             R0, R4, #0x30 ; '0'
+.text&ARM.extab:041AF178 01 20 A0 E3                   MOV             R2, #1
+.text&ARM.extab:041AF17C 01 10 8F E0                   ADD             R1, PC, R1              ; "TargetEnemyActor"
+.text&ARM.extab:041AF180 86 CD 07 EB                   BL              sub_43A27A0
+.text&ARM.extab:041AF180
+.text&ARM.extab:041AF184 20 16 1F E5                   LDR             R1, =(aT_260 - 0x41AF198) ; "T"
+.text&ARM.extab:041AF188 38 00 84 E2                   ADD             R0, R4, #0x38 ; '8'
+.text&ARM.extab:041AF18C 01 20 A0 E3                   MOV             R2, #1
+.text&ARM.extab:041AF190 01 10 8F E0                   ADD             R1, PC, R1              ; "T"
+.text&ARM.extab:041AF194 81 CD 07 EB                   BL              sub_43A27A0
+.text&ARM.extab:041AF194
+
+
+
+MobIsOutOfMoveRange
+1DD8840 
+1DD8A50 
+1DD8ABC
+1EA2F3C
+
+
+
+
+
+text&ARM.extab:041AF588 D8 1E 9F E5                   LDR             R1, =(aS_78 - 0x41AF59C) ; "s"
+.text&ARM.extab:041AF58C 68 00 84 E2                   ADD             R0, R4, #0x68 ; 'h'
+.text&ARM.extab:041AF590 01 20 A0 E3                   MOV             R2, #1
+.text&ARM.extab:041AF594 01 10 8F E0                   ADD             R1, PC, R1              ; "s"
+.text&ARM.extab:041AF598 80 CC 07 EB                   BL              sub_43A27A0
+.text&ARM.extab:041AF598
+.text&ARM.extab:041AF59C C8 1E 9F E5                   LDR             R1, =(aGlobalaverager - 0x41AF5B0) ; "GlobalAverageRating"
+.text&ARM.extab:041AF5A0 70 00 84 E2                   ADD             R0, R4, #0x70 ; 'p'
+.text&ARM.extab:041AF5A4 01 20 A0 E3                   MOV             R2, #1
+.text&ARM.extab:041AF5A8 01 10 8F E0                   ADD             R1, PC, R1              ; "GlobalAverageRating"
+.text&ARM.extab:041AF5AC 7B CC 07 EB                   BL              sub_43A27A0
+
+text&ARM.extab:041AECA8 14 12 1F E5                   LDR             R1, =(aConnectiontime - 0x41AECBC) ; "ConnectionTimeout"
+.text&ARM.extab:041AECAC 58 00 84 E2                   ADD             R0, R4, #0x58 ; 'X'
+.text&ARM.extab:041AECB0 01 20 A0 E3                   MOV             R2, #1
+.text&ARM.extab:041AECB4 01 10 8F E0                   ADD             R1, PC, R1              ; "ConnectionTimeout"
+.text&ARM.extab:041AECB8 B8 CE 07 EB                   BL              sub_43A27A0
+
+
+
+
+
+.text&ARM.extab:041AF9C8 78 1B 9F E5                   LDR             R1, =(aAifindnewenemy - 0x41AF9DC) ; "AIFindNewEnemy"
+.text&ARM.extab:041AF9CC 30 00 84 E2                   ADD             R0, R4, #0x30 ; '0'
+.text&ARM.extab:041AF9D0 01 20 A0 E3                   MOV             R2, #1
+.text&ARM.extab:041AF9D4 01 10 8F E0                   ADD             R1, PC, R1              ; "AIFindNewEnemy"
+.text&ARM.extab:041AF9D8 70 CB 07 EB                   BL              sub_43A27A0
+.text&ARM.extab:041AF9D8
+
+text&ARM.extab:041AF98C A8 1B 9F E5                   LDR             R1, =(aScorediffintdm - 0x41AF9A0) ; "ScoreDiffInTDM"
+.text&ARM.extab:041AF990 18 00 84 E2                   ADD             R0, R4, #0x18
+.text&ARM.extab:041AF994 01 20 A0 E3                   MOV             R2, #1
+.text&ARM.extab:041AF998 01 10 8F E0                   ADD             R1, PC, R1              ; "ScoreDiffInTDM"
+.text&ARM.extab:041AF99C 7F CB 07 EB                   BL              sub_43A27A0
+
+
+
+
+
+
+
+text&ARM.extab:041AF934 EC 1B 9F E5                   LDR             R1, =(aIstargetnearbo - 0x41AF948) ; "IsTargetNearBossContainer"
+.text&ARM.extab:041AF938 70 00 84 E2                   ADD             R0, R4, #0x70 ; 'p'
+.text&ARM.extab:041AF93C 01 20 A0 E3                   MOV             R2, #1
+.text&ARM.extab:041AF940 01 10 8F E0                   ADD             R1, PC, R1              ; "IsTargetNearBossContainer"
+.text&ARM.extab:041AF944 95 CB 07 EB                   BL              sub_43A27A0
+
+text&ARM.extab:041AF8F8 1C 1C 9F E5                   LDR             R1, =(aIstargetinwate - 0x41AF90C) ; "IsTargetInWater"
+.text&ARM.extab:041AF8FC 58 00 84 E2                   ADD             R0, R4, #0x58 ; 'X'
+.text&ARM.extab:041AF900 01 20 A0 E3                   MOV             R2, #1
+.text&ARM.extab:041AF904 01 10 8F E0                   ADD             R1, PC, R1              ; "IsTargetInWater"
+.text&ARM.extab:041AF908 A4 CB 07 EB                   BL              sub_43A27A0
+
+
+
+
+
+
+text&ARM.extab:041AF85C 9C 1C 9F E5                   LDR             R1, =(aSkilltargetact - 0x41AF870) ; "SkillTargetActor"
+.text&ARM.extab:041AF860 18 00 84 E2                   ADD             R0, R4, #0x18
+.text&ARM.extab:041AF864 01 20 A0 E3                   MOV             R2, #1
+.text&ARM.extab:041AF868 01 10 8F E0                   ADD             R1, PC, R1              ; "SkillTargetActor"
+.text&ARM.extab:041AF86C CB CB 07 EB                   BL              sub_43A27A0
+
+
+
+
